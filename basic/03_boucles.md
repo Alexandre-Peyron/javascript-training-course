@@ -78,3 +78,93 @@ Fouillez la doc et google pour trouver comment parcourir un tableau en Javascrip
 Générez et logguez les 20 premiers nombres de cette suite.
 
 
+### Triangle et papillon
+
+Dans le body de votre page, ajoutez la div suivante :
+
+```
+<div id="content"></div>
+```
+
+On va commencer à manipuler les éléments de la page. Dans le JS :
+
+```
+// on sélectionne un élément de notre page
+let divContent = document.querySelector("#content");
+
+console.log('divContent', divContent);
+
+// on y ajoute du contenu
+divContent.append('plop');
+
+```
+
+Votre travaille maintenant est de générer un triangle :
+
+```
+o
+oo
+ooo
+oooo
+ooooo
+oooooo
+ooooooo
+oooooooo
+ooooooooo
+oooooooooo
+ooooooooooo
+```
+
+Etape suivante, générer ceci : 
+
+```
+o
+oo
+ooo
+oooo
+ooooo
+oooooo
+ooooooo
+oooooooo
+ooooooooo
+oooooooooo
+ooooooooooo
+oooooooooo
+ooooooooo
+oooooooo
+ooooooo
+oooooo
+ooooo
+oooo
+ooo
+oo
+o
+```
+
+Etape suivante 
+
+```
+o                    o
+oo                  oo
+ooo                ooo
+oooo              oooo
+ooooo            ooooo
+oooooo          oooooo
+ooooooo        ooooooo
+oooooooo      oooooooo
+ooooooooo    ooooooooo
+oooooooooo  oooooooooo
+oooooooooooooooooooooo
+oooooooooo  oooooooooo
+ooooooooo    ooooooooo
+oooooooo      oooooooo
+ooooooo        ooooooo
+oooooo          oooooo
+ooooo            ooooo
+oooo              oooo
+ooo                ooo
+oo                  oo
+o                    o
+```
+
+Et voilà, vous avez un magnifique papillon.
