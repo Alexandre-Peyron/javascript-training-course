@@ -90,8 +90,11 @@ Notre variable a changé.
 Effectuez le même travail pour les lignes suivantes :
 
 `monNombre = monNombre * 3`
+
 `monNombre -= 1`
+
 `monNombre = monNombre / 5`
+
 `monNombre = monNombre % 3`
 
 On vient de voir ici les différents opérateurs utilisables en javascript pour additionner, multiplier, soustraire, diviser ou encore donner le reste d'une division euclidienne.
