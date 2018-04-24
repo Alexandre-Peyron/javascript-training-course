@@ -49,12 +49,19 @@ Testez votre script.
 
 > Le chevron > permet de crer une comparaison et renvoit ensuite un Boolean (true ou false) qui permet d'exécuter la condition.
 > Il existe plusieurs opérateur de comparaison
+>
 > `>` supérieur
+>
 > `<` inférieur
+>
 > `>=` supérieur ou égal
+>
 > `<=` inférieur ou égal
+>
 > `==` égaux
+>
 > `!=` différent
+>
 
 Nous allons maintenant rendre ça plus dynamique.
 
