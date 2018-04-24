@@ -60,14 +60,14 @@ console.log('alphabet : ', alphabet);
 console.log('alphabet index 0 : ', alphabet[0]);
 console.log('alphabet index 1 : ', alphabet[1]);
 console.log('alphabet index 2 : ', alphabet[2]);
-
+//....
 ```
 
 Au départ, on a donc une chaine de caractère avec toutes les lettres de l'alphabet.
 
 Et dans un second temps, on un tableau avec la liste des lettres.
 
-Fouillez la doc et google pour trouver comment parcourir un tableau en Javascript et logger chacune des lettres de manière indépendante.
+Votre travail maintenant, c'est de fouiller la doc et google pour trouver comment parcourir un tableau en Javascript avec une boucle `for` et logger chacune des lettres de manière indépendante.
 
 
 ### Suite de Fibonacci
