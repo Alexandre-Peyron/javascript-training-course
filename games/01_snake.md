@@ -58,30 +58,32 @@ Copiez le code suivant pour avoir le html de base du projet :
 </html>
 ```
 
-Maintenant, la structure de base du code JS
+Maintenant, la structure de base du code JS à mettre juste avant </body>
 
 ```
-// Déclaration des variables globales à notre programme
-const snake = document.querySelector('#snake');
-
-function initKeyboardListener() {
-    // écoute des event clavier
-}
-
-function moveSnake() {
-    // déplacement du serpent
-}
-
-function init() {
-    initKeyboardListener();
-
-    // on lance la fonction de déplacement au rythme de 3 images par seconde
-    setInterval(function() {
-        moveSnake();
-    }, 1000 / 3)
-}
-
-init();
+<script type="text/javascript">
+    // Déclaration des variables globales à notre programme
+    const snake = document.querySelector('#snake');
+    
+    function initKeyboardListener() {
+        // écoute des event clavier
+    }
+    
+    function moveSnake() {
+        // déplacement du serpent
+    }
+    
+    function init() {
+        initKeyboardListener();
+    
+        // on lance la fonction de déplacement au rythme de 3 images par seconde
+        setInterval(function() {
+            moveSnake();
+        }, 1000 / 3)
+    }
+    
+    init();
+</script>
 ```
 
 
