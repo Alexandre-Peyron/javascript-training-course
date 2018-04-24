@@ -27,6 +27,7 @@ Ouvrez le fichier dans votre éditeur de texte et ajoutez ça :
 <body>
     <head>
         <title>Les Variables en JavaScript</title>
+        <meta charset="UTF-8">
     </head>
     <body>
         <!-- Ici vos futures balises html -->
