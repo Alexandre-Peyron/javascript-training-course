@@ -58,4 +58,39 @@ Sauvegardez, retournez dans le navigateur et actualisez (touche F5 ou CTRL+R)
 
 Si le message s'affiche dans la console, félicitation votre premier script en JS fonctionne.
 
+#### Les variables - Number
 
+> La valeur d'une variable peut être de différents types :
+> Un nombre (Number)
+> Une chaine de caractère (String)
+> Un tableau (Array)
+> Un objet (Object)
+> Un booléen, (Boolean, true ou false) 
+
+Voyons maintenant comment réagissent les variables lorsqu'on les utilise.
+
+Déclarez une nouvelle variable au début de votre script :
+
+```
+let monNombre = 5;
+```
+
+Logguez `monNombre`. Sauvegardez, actualisez (il faut que ça devienne automatique pour vous, on va faire ça des milliers de fois :D )
+
+Ca doit afficher 5.
+
+A la suite, ajoutez : `monNombre += 2`. Logguez à nouveau `monNombre`.
+
+Notre variable a changé.
+
+> En effet, une variable possède une valeur à sa déclaration, Exemple 5, "mon texte" ou encore `null` si on ne met rien.
+> Mais cette valeur n'est pas figée dans le temps. On peut la modifier, la transformer, la réattribuer.
+
+Effectuez le même travail pour les lignes suivantes :
+
+`monNombre = monNombre * 3`
+`monNombre -= 1`
+`monNombre = monNombre / 5`
+`monNombre = monNombre % 3`
+
+On vient de voir ici les différents opérateurs utilisables en javascript pour additionner, multiplier, soustraire, diviser ou encore donner le reste d'une division euclidienne.
