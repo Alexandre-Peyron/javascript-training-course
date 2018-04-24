@@ -94,3 +94,26 @@ Effectuez le même travail pour les lignes suivantes :
 `monNombre = monNombre % 3`
 
 On vient de voir ici les différents opérateurs utilisables en javascript pour additionner, multiplier, soustraire, diviser ou encore donner le reste d'une division euclidienne.
+
+#### Les variables - String
+
+Créez une nouvelle variable contenant une chaine de caractères :
+
+`let monTexte = "Je m'appelle :"`
+
+Logguez, sauvegardez, actualiser.
+
+Maintenant, sans toucher à la déclaration de la variable, essayez d'ajouter votre prénom à la fin de la chaine.
+
+Une fois que c'est fait, mettez votre prénom dans une variable et essayez à nouveau de l'ajouter en fin de chaine.
+
+Ajoutez 'Bonjour,' en début de chaine.
+
+Nouvelle problématique, le "Je" au milieu de la chaine est en majuscule, ce n'est pas très propre.
+En fouillant un peu dans la [documentation de JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript), je suis tombé sur cette [méthode](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/toLowerCase) pour enlever les majuscules d'une chaine de caractères.
+
+Utilisez la.
+
+#### Conclusion
+
+Vous venez de coder vos premières lignes de JavaScript, Bravo.
