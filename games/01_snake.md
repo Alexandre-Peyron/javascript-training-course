@@ -21,6 +21,8 @@ Copiez le code suivant pour avoir le html de base du projet :
         html, body{
             width: 100%;
             height: 100%;
+            margin: 0;
+            padding: 0;
         }
 
         #container{
@@ -81,3 +83,6 @@ function init() {
 
 init();
 ```
+
+
+Un exemple pour les enfants que ne connaissent pas : [lien](http://patorjk.com/games/snake/)
