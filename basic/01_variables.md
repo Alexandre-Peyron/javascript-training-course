@@ -24,7 +24,7 @@ Créez un nouveau fichier vide : `variables.html` par exemple.
 Ouvrez le fichier dans votre éditeur de texte et ajoutez ça :
 
 ```
-<body>
+<html>
     <head>
         <title>Les Variables en JavaScript</title>
         <meta charset="UTF-8">
@@ -36,7 +36,7 @@ Ouvrez le fichier dans votre éditeur de texte et ajoutez ça :
             // ...
         </script>
     </body>
-</body>
+</html>
 ```
 
 Sauvegardez.
