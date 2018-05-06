@@ -2,7 +2,7 @@
 
 L'objectif de ce cours est de comprendre le fonctionnement et l'utilité des [conditions](https://fr.wikipedia.org/wiki/Instruction_conditionnelle_(programmation)) en JavaScript.
 
-> Comme pour les variables, ma notion de condition est présente dans tous les langages de programmation.
+> Comme pour les variables, la notion de condition est présente dans tous les langages de programmation.
 
 > if/else : voici les éléments de base d'une condition
 > 
@@ -47,8 +47,8 @@ else {
 
 Testez votre script.
 
-> Le chevron > permet de crer une comparaison et renvoit ensuite un Boolean (true ou false) qui permet d'exécuter la condition.
-> Il existe plusieurs opérateur de comparaison
+> Le chevron > permet de créer une comparaison et renvoit ensuite un Boolean (true ou false) qui permet d'exécuter la condition.
+> Il existe plusieurs opérateurs de comparaison
 >
 > `>` supérieur
 >

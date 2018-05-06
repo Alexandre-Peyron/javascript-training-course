@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02 Conditions</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    let mySizeCm = prompt('Quelle taille (en cm) faites vous ?');
+    let myWeight = prompt('Sans indiscrétion, quel est votre poids (en kg) ?');
+
+    let mySizeM = mySizeCm / 100;
+
+    let IMC = myWeight / Math.pow(mySizeM, 2);
+
+    console.log('IMC', IMC);
+
+
+    // Case 1 with many if
+    if (IMC < 16.5) {
+        console.log('Dénutrition');
+    }
+    else if (IMC < 18.5) {
+        console.log('Maigreur');
+    }
+    else if (IMC < 25) {
+        console.log('Corpulence normale');
+    }
+    else if (IMC < 30) {
+        console.log('Surpoids');
+    }
+    else if (IMC < 35) {
+        console.log('Obésité modérée');
+    }
+    else if (IMC < 40) {
+        console.log('Obésité sévère');
+    }
+    else {
+        console.log('Obésité morbide');
+    }
+
+
+    // Case 2, with array
+    let comparator = [
+        [16.5, 'Dénutrition'],
+        [18.5, 'Maigreur'],
+        [25, 'Corpulence normale'],
+        [30, 'Surpoids'],
+        [35, 'Obésité modérée'],
+        [40, 'Obésité sévère'],
+        [Infinity, 'Obésité morbide'],
+    ];
+
+    for (var i = 0; i < comparator.length; i++) {
+        if (IMC < comparator[i][0]) {
+            console.log(comparator[i][1]);
+            break;
+        }
+    }
+
+
+</script>
+</body>
+</html>
