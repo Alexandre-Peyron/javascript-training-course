@@ -3,10 +3,10 @@
 L'objectif de ce cours est de comprendre le fonctionnement et l'utilité des [boucles](https://fr.wikipedia.org/wiki/Boucle_for) en JavaScript.
 
 > La notion de boucle est présente dans tous les langages de programmation.
-
+>
 > Boucle for et boucle while
 > 
-> Elle permette de répéter une même action n fois
+> Elles permettent de répéter une même action n fois
 
 
 #### Avant la première boucle
@@ -67,8 +67,20 @@ Au départ, on a donc une chaine de caractère avec toutes les lettres de l'alph
 
 Et dans un second temps, on un tableau avec la liste des lettres.
 
-Votre travail maintenant, c'est de fouiller la doc et google pour trouver comment parcourir un tableau en Javascript avec une boucle `for` et logger chacune des lettres de manière indépendante.
+Votre travail maintenant, c'est de fouiller la doc et google pour 
+- trouver comment parcourir un tableau en Javascript avec une boucle `for`
+- logger chacune des lettres de manière indépendante.
 
+Rendu dans la console :
+```bash
+a
+b
+c
+d
+e
+f
+...
+```
 
 ### Suite de Fibonacci
 
