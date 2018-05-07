@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04 Fonctions</title>
+
+</head>
+<body>
+
+<script type="text/javascript">
+    // Is Pair ?
+    function isPair(myNumber) {
+        return Math.round(myNumber) % 2 === 0;
+    }
+
+    console.log('isPair(0) : ', isPair(0));
+    console.log('isPair(1) : ', isPair(1));
+    console.log('isPair(2) : ', isPair(2));
+    console.log('isPair(2.1) : ', isPair(2.1));
+    console.log('isPair(2.9) : ', isPair(2.9));
+    console.log('isPair(3.1) : ', isPair(3.1));
+    console.log('isPair(3.9) : ', isPair(3.9));
+    console.log('isPair(Infinity) : ', isPair(Infinity));
+
+
+    // factorial
+
+    function factorial(myNumber) {
+        let result = 1;
+
+        for (let i = 1; i <= myNumber; i++) {
+            result = result * i;
+        }
+
+        return result;
+    }
+
+    console.log('5! : ', factorial(5));
+
+
+    function factorialRecursive(myNumber) {
+        if(myNumber == 0) {
+            return 1;
+        } else {
+            return myNumber * factorialRecursive(myNumber - 1);
+        }
+    }
+
+    console.log('5! : ', factorialRecursive(5));
+
+</script>
+</body>
+</html>
