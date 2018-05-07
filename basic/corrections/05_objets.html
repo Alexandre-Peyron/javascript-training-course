@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05 Objets</title>
+
+</head>
+<body>
+
+<script type="text/javascript">
+    let person01 = {
+        firstName: 'Alex',
+        lastName: 'P',
+        age: 28,
+        gender: 'M',
+        email: 'plop@gmail.com',
+        fullName: function(){
+            return this.firstName + ' ' + this.lastName;
+        }
+    };
+
+    let person02 = {
+        firstName: 'Jackie',
+        lastName: 'Blangier',
+        age: 54,
+        gender: 'F',
+        email: 'jackie@gmail.com',
+        fullName: function(){
+            return this.firstName + ' ' + this.lastName;
+        }
+    };
+
+    let person03 = {
+        firstName: 'Bruce',
+        lastName: 'Wayne',
+        age: 40,
+        gender: 'M',
+        email: 'bat@man.com',
+        fullName: function(){
+            return this.firstName + ' ' + this.lastName;
+        }
+    };
+
+    let people = [
+        person01,
+        person02,
+        person03
+    ];
+
+
+    function girlsNumber(people) {
+        let girls = 0;
+
+        for (let i = 0; i < people.length; i++) {
+            if (people[i].gender === 'F') {
+                girls++;
+            }
+        }
+
+        return girls;
+    }
+
+    function boysNumber(people) {
+        let boys = 0;
+
+        for (let i = 0; i < people.length; i++) {
+            if (people[i].gender === 'M') {
+                boys++;
+            }
+        }
+
+        return boys;
+    }
+
+    function maxAge(people) {
+        let ageMax = 0;
+
+        for (let i = 0; i < people.length; i++) {
+            ageMax = Math.max(ageMax, people[i].age);
+        }
+
+        return ageMax;
+    }
+
+    function minAge(people) {
+        let ageMin = Infinity;
+
+        for (let i = 0; i < people.length; i++) {
+            ageMin = Math.min(ageMin, people[i].age);
+        }
+
+        return ageMin;
+    }
+
+    function fromGmailHost(people) {
+        let number = 0;
+
+        let regexp = RegExp('@gmail\.com');
+
+        for (let i = 0; i < people.length; i++) {
+            if ( regexp.test(people[i].email)) {
+                number++;
+            }
+        }
+
+        return number;
+    }
+
+
+    console.log('girlsNumber : ', girlsNumber(people));
+    console.log('boysNumber : ', boysNumber(people));
+    console.log('maxAge : ', maxAge(people));
+    console.log('minAge : ', minAge(people));
+    console.log('fromGmailHost : ', fromGmailHost(people));
+
+</script>
+</body>
+</html>
