@@ -390,3 +390,42 @@ bricks.push(brick); // on ajoute la brick au tableau de briques créé dans les 
 Des briques devrait apparaitre dans votre jeu. Problème, elles sont toutes sur une seule ligne.
 
 Améliorez la boucle, pour que la positionY et la positionX soient modifiées à chaque nouvelle ligne.
+
+
+### Collision avec les briques
+
+Maintenant que tous nos éléments visuels sont présents, avançons sur le gameplay.
+
+Il faut à présent détecter la collision entre la balle et les briques et supprimer 
+la brique le cas échéant.
+
+Nouvelle fonction `checkCollisionBricks` qu'on ajoute dans notre loop.
+
+Le fonctionnement est exactement le même qu'avec le `paddle`, a une différence près,
+tout se passe dans une boucle for pour tester la collision sur l'ensemble des briques.
+
+La fonction va ressemble à ça :
+
+```javascript
+function checkCollisionBricks() {
+    let ballCenterX = ball.offsetLeft + ballRadius;
+    let ballCenterY = ball.offsetTop + ballRadius;
+
+    for(let i = bricks.length - 1; i >= 0; i--) { // ici on boucle à l'envers 
+        let b = bricks[i];
+
+        // [...] variable la collisiont
+
+        // Collision
+        if () { 
+            ballDy = -ballDy; // changement de direction pour la balle
+
+            container.removeChild(b); // on supprime l'élément visuellement
+
+            bricks.splice(i, 1); // on supprime la brick du tableau
+        }
+    }
+}
+```
+
+Une fois tout ça en place, notre jeu est fonctionnel.
