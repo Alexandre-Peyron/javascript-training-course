@@ -285,12 +285,31 @@ Modifiez les conditions pour que ce problème visuel n'apparaisse plus.
 
 Maintenant que la balle et la barre restent dans la zone de jeu. Nous allons détecter la collision entre elle.
 
-En français, une collision signifie que "le cendre de la balle se trouve dans la zone de la barre".
+Créons une nouvelle fonction `checkCollisionPaddle` à appeler dans `loop`.
+
+On se retrouve donc avec ceci : 
+
+```javascript
+function loop(){
+    animationFrame = window.requestAnimationFrame(function() {
+        movePaddle();
+        moveBall();
+        checkCollisionPaddle();
+
+        loop();
+    })
+}
+```
+Et notre fonction qui est déclaré à la suite des autres.
+
+En français, on peut définir la collision ainsi : "le cendre de la balle se trouve dans la zone de la barre".
 
 Autrement dit, si 
 - la position centreX de la balle se situe entre la positionLeftX et la positionRightX de la barre
 ET
-- la position centreY de la balle se situe entre la positionTopY et la positionBottomY de la barre
+- la position centreY de la balle se situe entre la positionTopY et la positionBottomY de la barre...
+
+... alors on a une collision
 
 Liste des variables nécessaires pour ces calculs :
 
@@ -308,9 +327,7 @@ let paddleBottom = paddleTopY + paddleHeight;
 
 ```
 
-Ecrivez maintenant la condition qui détermine la collision.
-
-Lors d'une collision `ballDy` devient `-ballDy`.
+Ecrivez maintenant la condition qui détermine la collision. Lorsque la condition est vraie, `ballDy` devient `-ballDy`.
 
 Le comportement est maintenant fonctionnel, mais pas terrible encore.
 
