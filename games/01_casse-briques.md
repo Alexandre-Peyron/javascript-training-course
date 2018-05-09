@@ -212,3 +212,70 @@ let containerWidth = ...;
 ```
 
 A vous de jouer.
+
+
+### Mouvement de la balle
+
+Maintenant, qu'on a une barre fonctionnelle, il nous faut une balle.
+
+Nous allons créer une nouvelle fonction `moveBall` 
+à la suite de `movePaddle` et qu'on va appeler dans la fonction `loop`;
+
+Dans la même optique, en début de script, nous allons déclarer 3 nouvelles variables globales
+
+```javascript
+// Ball config
+let ballRadius = 10;
+let ballDx = 2;
+let ballDy = -2;
+```
+
+- `ballRadius` est le rayon de la ball, cela va nous servir dans les calculs de limites
+- `ballDx` est la vitesse de déplacement de la balle en X
+- `ballDy` est la vitesse de déplacement de la balle en Y
+
+Comme pour la paddle, pour calculer le mouvement, il nous faut :
+- la position actuelle de la balle en X et Y
+- ajouter ballDx et ballDy
+- attribuer les nouvelles valeurs
+
+```javascript
+let currentPositionLeft = ball.offsetLeft;
+let currentPositionTop = ball.offsetTop;
+
+currentPositionLeft += ballDx;
+currentPositionTop += ballDy;
+
+ball.style.left = currentPositionLeft + 'px';
+ball.style.top = currentPositionTop + 'px';
+```
+
+Voilà, notre balle se déplace. Problème, elle sort rapidement de la zone de jeu.
+
+### Limite de la balle
+
+Il faut maintenant calculer les limites de la balle sur chacun des bords du jeu : top, left, bottom et right.
+
+Définition des différentes limites :
+
+- Top
+    - La position Y de la balle, ne doit pas être inférieure à 0
+    - ballDy devient -ballDy
+- Bottom
+    - La position Y de la balle, ne doit pas être supérieure à la hauteur du jeu
+    - ballDy devient -ballDy
+- Left 
+    - La position X de la balle, ne doit pas être inférieure à 0
+    - ballDx devient -ballDx
+- Right
+    - La position X de la balle, ne doit pas être supérieure à la largeur du jeu
+    - ballDx devient -ballDx
+    
+A présent, votre balle doit rebondir sur les murs.
+
+Nouveau problème, à droite et en bas, on a l'impression qu'elle passe à travers le mur.
+
+Ce comportement est normal, car le point de référence n'est pas le centre de la balle mais son top left.
+
+Le ballRadius a toute son importance ici. Sur le calcul du right c'est bien la partie droite de la balle que l'on veut. Idem pour le bottom. 
+Modifiez les conditions pour que ce problème visuel n'apparaisse plus.
