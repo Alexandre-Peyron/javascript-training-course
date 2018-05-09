@@ -334,3 +334,59 @@ Le comportement est maintenant fonctionnel, mais pas terrible encore.
 Faites en sorte que lorsque :
 - la balle tape sur la moitié gauche de la barre, `ballDx` devient négatif
 - la balle tape sur la moitié droite de la barre, `ballDx` devient positif
+
+
+### Création des briques
+
+Pour créer des briques, nous allons créer une sorte de tableau de 5*5 cases.
+
+Proprités des briques :
+- largeur : 100px
+- hauteur : 22px
+- marge entre les briques : 10px
+
+Créons une nouvelle fonction `createBrick` dont l'appel sera juste après `initKeyboardListener()`.
+Cette fonction est lancé qu'une seule fois, au chargement du jeu.
+
+Initialisons notre fonction :
+
+```javascript
+function createBrick(){
+    // Brick config
+    let brickWidth = 100; // largeur d'une brique
+    let brickHeight = 22; // hauteur d'une brique
+    let brickMargin = 10; // espacement entre les briques
+    
+    let numberBrickPerLine = 5; // nombre de brique par ligne
+    let numberBrickPerColumn = 5; // nombre de brique par colonne
+    
+    let positionX = 0; // position x de la brique en cours de création
+    let positionY = 0; // position y de la brique en cours de création
+
+}
+```
+
+Pour générer un tableau de 5*5 cases, il faut que l'on imbrique 2 boucle for 
+dont les paramètres seront `numberBrickPerLine` et `numberBrickPerColumn`.
+
+Et à chaque itération, nous allons créer une nouvelle brique
+
+```javascript
+let brick = document.createElement('div'); // creation d'un élément div
+brick.className = 'brick'; // ajout de la class css .brick
+
+brick.style.width = brickWidth + 'px'; //attribution du style
+brick.style.height = brickHeight + 'px';
+brick.style.left = positionX + 'px';
+brick.style.top = positionY + 'px';
+
+container.appendChild(brick); // on ajoute l'élément div à notre container
+
+positionX += brickWidth + brickMargin; // la position X de la brique suivante, sera la largeur d'une brique + la margin
+
+bricks.push(brick); // on ajoute la brick au tableau de briques créé dans les variables globales
+```
+
+Des briques devrait apparaitre dans votre jeu. Problème, elles sont toutes sur une seule ligne.
+
+Améliorez la boucle, pour que la positionY et la positionX soient modifiées à chaque nouvelle ligne.
