@@ -183,7 +183,7 @@ A partir de là, changez la valeur de `currentPaddlePositionX` d'un "pas" ou ("-
 Attribuez la nouvelle valeur à la barre
 
 ```javascript
-paddle.style.left = currentPositionLeft + 'px';
+paddle.style.left = currentPaddlePositionX + 'px';
 ```
 
 A présent votre barre bouge de droite à gauche.
