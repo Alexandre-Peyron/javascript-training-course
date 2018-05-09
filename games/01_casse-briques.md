@@ -279,3 +279,41 @@ Ce comportement est normal, car le point de référence n'est pas le centre de l
 
 Le ballRadius a toute son importance ici. Sur le calcul du right c'est bien la partie droite de la balle que l'on veut. Idem pour le bottom. 
 Modifiez les conditions pour que ce problème visuel n'apparaisse plus.
+
+
+### Collision entre la balle et la barre
+
+Maintenant que la balle et la barre restent dans la zone de jeu. Nous allons détecter la collision entre elle.
+
+En français, une collision signifie que "le cendre de la balle se trouve dans la zone de la barre".
+
+Autrement dit, si 
+- la position centreX de la balle se situe entre la positionLeftX et la positionRightX de la barre
+ET
+- la position centreY de la balle se situe entre la positionTopY et la positionBottomY de la barre
+
+Liste des variables nécessaires pour ces calculs :
+
+```
+let ballCenterX = ...
+let ballCenterY = ...
+
+let paddleWidth = paddle.offsetWidth;
+let paddleHeight = paddle.offsetHeight;
+
+let paddleLeftX = ...
+let paddleRightX = paddleLeftX + paddleWidth;
+let paddleTopY = ...
+let paddleBottom = paddleTopY + paddleHeight;
+
+```
+
+Ecrivez maintenant la condition qui détermine la collision.
+
+Lors d'une collision `ballDy` devient `-ballDy`.
+
+Le comportement est maintenant fonctionnel, mais pas terrible encore.
+
+Faites en sorte que lorsque :
+- la balle tape sur la moitié gauche de la barre, `ballDx` devient négatif
+- la balle tape sur la moitié droite de la barre, `ballDx` devient positif
