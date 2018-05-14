@@ -132,7 +132,7 @@ console.log('Valeur : ', inputLastnameValue);
 On peut voir que en JS, on vient de récupérer le contenu de l'input.
 
 A présent, testez la valeur de l'input, les conditions sont :
-- la chaine de caractères ne peut contenir que des lettres, des chiffres et des -
+- la chaine de caractères ne peut contenir que des lettres, des chiffres, des - et des espaces
 - elle doit faire entre 3 et 30 caractères
 
 Si les toutes les conditions sont bonnes **ajoutez** la class `is-valid` sur l'input. 
