@@ -27,10 +27,10 @@ Récupérer le code suivant :
 <div class="container">
     <div clas="row">
         <h1>Inscription</h1>
-        <form action="/" method="post" class="col-6">
+        <form id="form__register" action="/" method="post" class="col-6" novalidate="novalidate" >
             <div class="form-group is-invalid">
                 <label for="form__register_lastname">Nom*</label>
-                <input type="email" class="form-control is-valid" id="form__register_lastname" value="fdfldf" required>
+                <input type="email" class="form-control" id="form__register_lastname" value="Un nom comme un autre" required>
                 <div class="form-errors"></div>
             </div>
             <div class="form-group">
@@ -90,7 +90,7 @@ Récupérer le code suivant :
                 </div>
             </div>
             <hr>
-            <button type="button" class="btn btn-success">Valider</button>
+            <button type="submit" class="btn btn-success">Valider</button>
         </form>
     </div>
 </div>
