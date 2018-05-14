@@ -7,7 +7,7 @@ L'objectif de ce cours est de comprendre ce qu'est le DOM et comment on le manip
 >
 > Personnellement, j'ai rien compris.
 >
-> De manière plus simple, le DOM c'est la structure de votre page HTML, tout ce qui se trouve entre les 2 balises `<html>`
+> De manière plus simple, le DOM c'est la structure de votre page HTML, tout ce qui se trouve entre les 2 balises `<html>`.
 > Toutes les balises qui se trouvent dans le DOM peuvent être sélectionnées, modifiées, déplacées, incorporées, (re)créées, supprimées... ça ouvre un champs des possibles très large.
 
 
@@ -30,7 +30,7 @@ Récupérer le code suivant :
         <form action="/" method="post" class="col-6">
             <div class="form-group is-invalid">
                 <label for="form__register_lastname">Nom*</label>
-                <input type="email" class="form-control is-invalid" id="form__register_lastname" required>
+                <input type="email" class="form-control is-valid" id="form__register_lastname" value="fdfldf" required>
                 <div class="form-errors"></div>
             </div>
             <div class="form-group">
@@ -61,8 +61,12 @@ Récupérer le code suivant :
             </div>
             <div class="form-group">
                 <label for="form__register_email">Email*</label>
-                <input type="email" class="form-control" id="form__register_email" required>
-                <div class="form-errors"></div>
+                <input type="email" class="form-control is-invalid" id="form__register_email" value="ploporange.com" required>
+                <div class="form-errors">
+                    <small class="text-danger">
+                        Cet email n'est pas valide
+                    </small>
+                </div>
             </div>
             <div class="form-group">
                 <label for="form__register_password">Mot de passe*</label>
@@ -74,13 +78,15 @@ Récupérer le code suivant :
                 <input type="password" class="form-control" id="form__register_password-repeat" required>
                 <div class="form-errors"></div>
             </div>
-            <div class="form-group">
-                <div class="checkbox">
-                    <label for="form__register_conditions">
-                        Accepter les conditions*
-                        <input type="checkbox" id="form__register_conditions" required>
-                    </label>
-                    <div class="form-errors"></div>
+            <div class="form-group row">
+                <label class="col-6" for="form__register_conditions">
+                    Accepter les conditions*
+                </label>
+                <input type="checkbox" class="col-6 form-control" id="form__register_conditions" required>
+                <div class="form-errors col-12">
+                    <small class="text-danger">
+                        Vous devez accepter les conditions générales
+                    </small>
                 </div>
             </div>
             <hr>
@@ -89,13 +95,12 @@ Récupérer le code suivant :
     </div>
 </div>
 <script type="text/javascript">
-
 </script>
 </body>
 </html>
 ```
 
-Il s'agit d'une page simple avec un formulaire d'inscription. Pour explication, les class utilisées proviennent du framework CSS [bootstrap 4](https://getbootstrap.com/)
+Il s'agit d'une page simple avec un formulaire d'inscription. Pour explication, les class utilisées proviennent du framework CSS [bootstrap 4](https://getbootstrap.com/).
 
 Comme dit précédemment, chaque élément de la page est sélectionnable. Soit grace à son ID, sa class, son type/balise, son état...
 
@@ -115,7 +120,7 @@ Au console.log, cela affiche le HTML de l'élément, on est en présence d'un DO
 
 Sur [ce lien](https://www.w3schools.com/jsref/dom_obj_all.asp) vous pouvez voir l'ensemble des propriétés et méthodes d'un object DOM Element. 
 
-### Manipulation
+### Manipulation simple
 
 Dans le HTML, ajoutez une value="mon nom ou autre chose" à l'input `form__register_lastname`. Ajoutez ensuite le code suivant :
 
@@ -136,6 +141,36 @@ Si ce n'est pas le cas :
 - mettre `is-invalid` 
 - ajoutez un message d'erreur dans `<div class="form-errors"></div>` en dessous de l'input
 
+### Manipulations multiples par class
+
+Nous venons de tester un input, le problème c'est que actuellement au chargement, des messages d'erreurs sont déjà présents.
+
+Faisons une sélection multiple
+
+```javascript
+let inputErrors = document.getElementsByClassName('form-errors');
+```
+
+Nous venons de sélectionner l'ensemble des éléments qui possèdent la class `form-errors`.
+
+`inputErrors` est donc un tableau de DOM Element.
+
+Maintenant il faut supprimer les messages d'erreurs :
+- parcourir l'ensemble des éléments 
+- supprimer le contenu texte
+
+
+### Manipulations multiples par type
+
+Les messages d'erreurs ne sont plus. Mais certains input possèdent en encore la class `is-invalid`.
+
+La ligne suivante sélectionne l'ensemble des input de la page :
+
+```javascript
+let inputs = document.getElementsByTagName('input');
+```
+
+A présent supprimez la class `is-invalid` pour tous les inputs
 
 
 
