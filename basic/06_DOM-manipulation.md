@@ -6,8 +6,9 @@ L'objectif de ce cours est de comprendre ce qu'est le DOM et comment on le manip
 > Le Document Object Model (ou DOM) est une recommandation du W3C qui décrit une interface indépendante de tout langage de programmation et de toute plate-forme, permettant à des programmes informatiques et à des scripts d’accéder ou de mettre à jour le contenu, la structure ou le style de documents XML. Le document peut ensuite être traité et les résultats de ces traitements peuvent être réincorporés dans le document tel qu’il sera présenté.
 >
 > Personnellement, j'ai rien compris.
-> De manière plus simple, le DOM c'est la structure de votre page HTML, tout ce qui se trouve entre les 2 balises <html>
-> Toutes les balises qui se trouvent dans le DOM peuvent être sélectionnées, modifiées, déplacées, incorporées, re-créées, supprimées... ça ouvre un champs des possibles très large.
+>
+> De manière plus simple, le DOM c'est la structure de votre page HTML, tout ce qui se trouve entre les 2 balises `<html>`
+> Toutes les balises qui se trouvent dans le DOM peuvent être sélectionnées, modifiées, déplacées, incorporées, (re)créées, supprimées... ça ouvre un champs des possibles très large.
 
 
 ### Premier sélecteur
@@ -110,13 +111,13 @@ Voici notre premier sélecteur :
 - `document` indique qu'on commence la recherche de notre sélecteur à la racine du DOM.
 - `getElementById` va chercher l'élément dont l'ID est `form__register_lastname` et le met dans une variable.
 
-Au console.log, cela affiche la version HTML de l'élément, en fait on est en présence d'un DOM Element.
+Au console.log, cela affiche le HTML de l'élément, on est en présence d'un DOM Element.
 
-Sur [ce lien](https://www.w3schools.com/jsref/dom_obj_all.asp) vous pouvez voir l'ensemble des propriétés et méthode d'un object DOM Element. 
+Sur [ce lien](https://www.w3schools.com/jsref/dom_obj_all.asp) vous pouvez voir l'ensemble des propriétés et méthodes d'un object DOM Element. 
 
 ### Manipulation
 
-Dans le HTML, ajoutez une value="mon nom" à `form__register_lastname`. Ajoutez le code suivant :
+Dans le HTML, ajoutez une value="mon nom ou autre chose" à l'input `form__register_lastname`. Ajoutez ensuite le code suivant :
 
 ```javascript
 let inputLastnameValue = inputLastname.value;
