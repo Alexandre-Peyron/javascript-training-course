@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06 DOM</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div clas="row">
+        <h1>Inscription</h1>
+        <form action="/" method="post" class="col-6">
+            <div class="form-group is-invalid">
+                <label for="form__register_lastname">Nom*</label>
+                <input type="text" class="form-control" id="form__register_lastname" value="" required>
+                <div class="form-errors"></div>
+            </div>
+            <div class="form-group">
+                <label for="form__register_firstname">Prénom</label>
+                <input type="text" class="form-control" id="form__register_firstname">
+                <div class="form-errors"></div>
+            </div>
+            <div class="form-group">
+                <label>Sexe</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="form__register_gender" id="form__register_gender01" value="M" >
+                    <label class="form-check-label" for="form__register_gender01">
+                        Homme
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="form__register_gender" id="form__register_gender02" value="F">
+                    <label class="form-check-label" for="form__register_gender02">
+                        Femme
+                    </label>
+                </div>
+                <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="form__register_gender" id="form__register_gender03" value="A" checked>
+                    <label class="form-check-label" for="form__register_gender03">
+                        Non renseigné
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="form__register_email">Email*</label>
+                <input type="email" class="form-control is-invalid" id="form__register_email" value="ploporange.com" required>
+                <div class="form-errors">
+                    <small class="text-danger">
+                        Cet email n'est pas valide
+                    </small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="form__register_password">Mot de passe*</label>
+                <input type="password" class="form-control" id="form__register_password" required>
+                <div class="form-errors"></div>
+            </div>
+            <div class="form-group">
+                <label for="form__register_password-repeat">Validation mot de passe*</label>
+                <input type="password" class="form-control" id="form__register_password-repeat" required>
+                <div class="form-errors"></div>
+            </div>
+            <div class="form-group row">
+                <label class="col-6" for="form__register_conditions">
+                    Accepter les conditions*
+                </label>
+                <input type="checkbox" class="col-6 form-control" id="form__register_conditions" required>
+                <div class="form-errors col-12">
+                    <small class="text-danger">
+                        Vous devez accepter les conditions générales
+                    </small>
+                </div>
+            </div>
+            <hr>
+            <button type="button" class="btn btn-success">Valider</button>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+
+function checkInputText(options) {
+    // Get Value
+    let input = options.input;
+    let inputValue = input.value;
+    let inputErrorMessage = input.parentElement.querySelector('.form-errors');
+
+    // Reset Input
+    options.input.classList.remove(['is-valid', 'is-invalid']);
+    inputErrorMessage.innerHTML = '';
+
+    // Error default value
+    let error = {
+        hasError : false,
+        className : 'is-valid',
+        text : ''
+    };
+
+    // Check if required
+    if(options.required && inputValue.length === 0){
+        error.hasError = true;
+        error.text += '<small class="text-danger">Ce champ est requis</small><br>';
+    }
+
+    if(options.required && inputValue.length > 0) {
+        // Check is letter and - and space only
+        if (!options.regExp.test(inputValue)) {
+            error.hasError = true;
+            error.text += '<small class="text-danger">Le champ n\'est pas valide</small><br>';
+        }
+
+        // Check string length min
+        if (options.lengthMin && inputValue.length < options.lengthMin) {
+            error.hasError = true;
+            error.text += '<small class="text-danger">Ce champ est trop court</small>';
+        }
+
+        // Check string length max
+        if (options.lengthMax && inputValue.length > options.lengthMax) {
+            error.hasError = true;
+            error.text += '<small class="text-danger">Ce champ est trop long</small>';
+        }
+    }
+
+
+
+    error.className = (error.hasError)? 'is-invalid' : 'is-valid';
+
+    // Set new values
+    input.classList.add(error.className);
+    inputErrorMessage.innerHTML = error.text;
+}
+
+checkInputText({
+    input: document.getElementById('form__register_lastname'),
+    required: true,
+    regExp: new RegExp('^[a-zA-Z- ]+$'),
+    lengthMin: 3,
+    lengthMax: 30
+});
+
+checkInputText({
+    input: document.getElementById('form__register_firstname'),
+    required: false,
+    regExp: new RegExp('^[a-zA-Z- ]+$'),
+    lengthMin: 3,
+    lengthMax: 30
+});
+
+
+checkInputText({
+    input: document.getElementById('form__register_email'),
+    required: true,
+    regExp: new RegExp('/^\S+@\S+\.\S+$/')
+});
+
+</script>
+</body>
+</html>
