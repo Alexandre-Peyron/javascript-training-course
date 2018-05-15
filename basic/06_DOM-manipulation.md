@@ -28,14 +28,14 @@ Récupérer le code suivant :
     <div clas="row">
         <h1>Inscription</h1>
         <form id="form__register" action="/" method="post" class="col-6" novalidate="novalidate" >
-            <div class="form-group is-invalid">
+            <div class="form-group">
                 <label for="form__register_lastname">Nom*</label>
-                <input type="email" class="form-control" id="form__register_lastname" value="Un nom comme un autre" required>
+                <input type="text" class="form-control" id="form__register_lastname" value="Un nom comme un autre" required>
                 <div class="form-errors"></div>
             </div>
             <div class="form-group">
                 <label for="form__register_firstname">Prénom</label>
-                <input type="email" class="form-control" id="form__register_firstname">
+                <input type="text" class="form-control" id="form__register_firstname">
                 <div class="form-errors"></div>
             </div>
             <div class="form-group">
@@ -52,7 +52,7 @@ Récupérer le code suivant :
                         Femme
                     </label>
                 </div>
-                <div class="form-check disabled">
+                <div class="form-check">
                     <input class="form-check-input" type="radio" name="form__register_gender" id="form__register_gender03" value="A" checked>
                     <label class="form-check-label" for="form__register_gender03">
                         Non renseigné
