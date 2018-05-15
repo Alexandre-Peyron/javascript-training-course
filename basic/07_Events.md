@@ -57,6 +57,6 @@ Maintenant pour chaque champ du formulaire, créez une fonction qui va valider l
     - Requis
     - entre 7 et 20 caractères
     - identique à la répétition
-    - Bonus : contient au moins 1 chiffre, 1 lettre majuscule, 1 lettre minuscule, 1 caractère spécial
+    - Bonus : contient au moins 1 chiffre, 1 lettre majuscule, 1 lettre minuscule, 1 caractère spécial (_-"'~|&%#@*+=:;.,?!(){}[])
     
  
