@@ -57,6 +57,26 @@ Maintenant pour chaque champ du formulaire, créez une fonction qui va valider l
     - Requis
     - entre 7 et 20 caractères
     - identique à la répétition
-    - Bonus : contient au moins 1 chiffre, 1 lettre majuscule, 1 lettre minuscule, 1 caractère spécial (_-"'~|&%#@*+=:;.,?!(){}[]) \
+    - Bonus : contient au moins 1 chiffre, 1 lettre majuscule, 1 lettre minuscule, 1 caractère spécial (_-"'~|&%#@*+=:;.,?!(){}[]) 
+    
+
+A présent, notre formulaire est parfaitement fortionnel. 
+
+A chaque tentative de soumission, toutes les données sont validées et elles ne sont envoyées que si l'ensemble est correct.
+
+
+### Event change
+
+Le comportement est bon, mais on peut aller plus loin.
+
+Outre le formulaire, chacun des inputs possède également des évènements sur lesquels nous pouvons nous ratacher.
+
+L'event 'change' notamment.
+
+Prenez l'input du nom, est écoutez l'event 'change'. Logguez le résultat, regardez quand et comment se produit l'évènement.
+
+A présent, ajoutez la vérification sur ce champ à chaque changement.
+
+
     
  
