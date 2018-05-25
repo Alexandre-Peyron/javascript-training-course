@@ -46,7 +46,18 @@ let menu = $('#menu'); // Sélection de l'élément dans le DOM qui possède l'I
 
 Attention, ce qui est présent dans la variable `menu`, c'est un objet jQuery, pas un DOM Element comme avec un sélecteur JS classique.
 
-Exercice : récupérez le HTML suivant et utilisez les sélecteurs jQuery pour trouver les 
+Exercice : récupérez le HTML suivant et utilisez les sélecteurs jQuery pour trouver les élements ci-dessous :
+ 
+Les sélecteurs à créer :
+- la sidebar
+- le main
+- le footer
+- le h1
+- les `a` du menu de la sidebar
+- tous les `a` sauf celui avec la class `logo
+- les `p`
+- les `p` dans avec la class `lead`
+- les `p` dont la class commence par `text-` 
  
 ```html
 <!DOCTYPE html>
@@ -94,17 +105,6 @@ Exercice : récupérez le HTML suivant et utilisez les sélecteurs jQuery pour t
 </body>
 </html>
 ```
-
-Les sélecteurs à créer :
-- la sidebar
-- le main
-- le footer
-- le h1
-- les `a` du menu de la sidebar
-- tous les `a` sauf celui avec la class `logo
-- les `p`
-- les `p` dans avec la class `lead`
-- les `p` dont la class commence par `text-``
 
 
 ### Manipulation
