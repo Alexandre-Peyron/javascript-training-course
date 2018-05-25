@@ -107,7 +107,7 @@ Les sélecteurs à créer :
 - les `p` dont la class commence par `text-``
 
 
-# Manipulation
+### Manipulation
 
 On vient de voir les sélecteurs, mais on en fait quoi de ces éléments sélectionnés.
 
@@ -158,3 +158,77 @@ Les propriétés de l'élément :
 - .outerWidth() : largeur en comptant les marges intérieures et les bords
 - .offset() : définit les coordonnées d'un élément relativement au coin en haut à gauche de l'objet document
 - .position() : définit les coordonnées d'un élément relativement à son parent direct
+
+### Exercice
+
+A partir du HTML et CSS suivant, créer un menu accordéon.
+
+Le fonctionnement : au click sur un `li`, il faut que :
+- le `p` contenu dans le li apparaisse
+- la flèche change de direction (vers le bas)
+- les autres `p` qui étaient visibles, disparaissent
+
+A vous de trouver comment on écoute un évènement avec jQuery (ici le click)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            position: relative;
+            border: 1px solid black;
+            border-radius: 20px;
+            margin: 20px;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        ul li p {
+            display: none;
+        }
+
+        .arrow{
+            position: absolute;
+            right: 30px;
+            top: 35px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<ul>
+    <li>
+        <h3>Titre1</h3>
+        <span class="arrow left">◀</span>
+        <p class="">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    </li>
+    <li>
+        <h3>Titre2</h3>
+        <p class="">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <span class="arrow left">◀</span>
+    </li>
+    <li>
+        <h3>Titre3</h3>
+        <p class="">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <span class="arrow left">◀</span>
+    </li>
+    <li>
+        <h3>Titre4</h3>
+        <p class="">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <span class="arrow left">◀</span>
+    </li>
+</ul>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+```
+
+
