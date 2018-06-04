@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Weather</title>
+
+</head>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        callOpenWeatherMap();
+    });
+
+    function callOpenWeatherMap(){
+        let apikey = "a489634d813bdeabfbe88212a1350a50";
+
+        $.ajax({
+            method: "GET",
+            url: "https://api.openweathermap.org/data/2.5/weather?q=Lyon&units=metric&APPID=" + apikey,
+            dataType: "JSON"
+        }).done(function(data) {
+            console.log('data', data)
+        }).fail(function() {
+            alert( "error" );
+        });
+
+
+    }
+
+</script>
+</body>
+</html>
