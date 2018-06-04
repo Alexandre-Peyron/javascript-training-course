@@ -99,4 +99,32 @@ A la validation de l'input, il faut :
 - mettre à jour le DOM avec les nouvelles données
 
 
+### Autres méthodes de l'API
 
+Nous avons un champ de recherche fonctionnel !
+
+Il fonctionne si on entre le nom d'une ville dans l'input.
+
+L'API propose d'autres méthodes de recherches :
+- nom de ville
+- ID d'une ville
+- latitude, longitude
+
+Faites évoluer votre script, pour faire une recherche sur l'API en fonction du type de données présentes dans l'input :
+- que des chiffres : c'est un ID
+- une virgule présente : c'est une latitude/longitude
+- pour le reste, on considère que c'est un nom de ville
+
+
+### Nouvelle API - Google Maps
+
+Faisons encore évoluer notre programme.
+
+Ajoutons une carte ([Google Maps](https://developers.google.com/maps/?hl=fr)), centrée sur notre ville.
+
+L'objectif étant, qu'à chaque nouvelle recherche sur l'API Open Weather Map, les latitudes et longitudes présentes dans la réponse
+seront utilisées pour mettre  à jour la carte.
+
+Je vous laisse volontaire très peu d'indications.
+
+Tout se trouve dans la [documentation](https://developers.google.com/maps/documentation/javascript/adding-a-google-map)
