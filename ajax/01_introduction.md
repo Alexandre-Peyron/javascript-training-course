@@ -79,6 +79,24 @@ L'API Open Weather Map fournit un pack d'icon pour l'affichage des données.
 
 [https://openweathermap.org/weather-conditions](https://openweathermap.org/weather-conditions)
 
-Dans votre page, faites en sorte d'afficher l'icon.
+Dans votre page, faites en sorte d'afficher l'icon correspondante au Weather.
 
 Son nom se trouve dans la réponse JSON dans `weather[i].icon`.
+
+Affichez également le nom de la ville dans la page.
+
+
+### Champ de recherche
+
+A présent, nous allons faire évoluer notre page pour afficher la météo, 
+plus seulement pour Lyon, mais pour chaque ville recherchée.
+
+Ajoutez un formulaire avec un `input type text` et un `submit` de recherche.
+
+A la validation de l'input, il faut :
+- récupérer la valeur (qui sera la nom d'une ville) 
+- appliquer ce nom de ville à l'appel vers l'API.
+- mettre à jour le DOM avec les nouvelles données
+
+
+
