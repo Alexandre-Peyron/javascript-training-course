@@ -120,7 +120,7 @@ Trouvez comment mettre en place un watcher sur vos fichiers JS.
 
 ### Sources
 
-[http://putaindecode.io/fr/articles/js/gulp/](http://putaindecode.io/fr/articles/js/gulp/)
-[https://www.alsacreations.com/tuto/lire/1686-introduction-a-gulp.html](https://www.alsacreations.com/tuto/lire/1686-introduction-a-gulp.html)
-[https://github.com/gulpjs/gulp](https://github.com/gulpjs/gulp)
-[https://la-cascade.io/gulp-pour-les-debutants/](https://la-cascade.io/gulp-pour-les-debutants/)
+- [http://putaindecode.io/fr/articles/js/gulp/](http://putaindecode.io/fr/articles/js/gulp/)
+- [https://www.alsacreations.com/tuto/lire/1686-introduction-a-gulp.html](https://www.alsacreations.com/tuto/lire/1686-introduction-a-gulp.html)
+- [https://github.com/gulpjs/gulp](https://github.com/gulpjs/gulp)
+- [https://la-cascade.io/gulp-pour-les-debutants/](https://la-cascade.io/gulp-pour-les-debutants/)
